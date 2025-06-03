@@ -49,7 +49,7 @@ export const ContactUs = () => {
           emailjs
             .send(
               contactConfig.YOUR_SERVICE_ID,
-              "ubwymup",
+              "template_ezp8h3l",
               autoReplyParams,
               contactConfig.YOUR_USER_ID
             )
