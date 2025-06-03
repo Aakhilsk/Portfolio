@@ -31,8 +31,8 @@ export const ContactUs = () => {
 
     // Template parameters for auto-reply
     const autoReplyParams = {
-      user_name: formData.name,
-      to_name: "Aakhil Shaik",
+      email: formData.email,
+      name: formData.name,
     };
 
     // Send notification email to you
@@ -49,7 +49,7 @@ export const ContactUs = () => {
           emailjs
             .send(
               contactConfig.YOUR_SERVICE_ID,
-              "template_ezp8h3l", // TODO: Replace this with your auto-reply template ID from EmailJS dashboard
+              "ubwymup",
               autoReplyParams,
               contactConfig.YOUR_USER_ID
             )
