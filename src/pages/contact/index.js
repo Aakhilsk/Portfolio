@@ -21,29 +21,58 @@ export const ContactUs = () => {
     e.preventDefault();
     setFormdata({ loading: true });
 
-    const templateParams = {
+    // Template parameters for your notification email
+    const notificationParams = {
       from_name: formData.email,
       user_name: formData.name,
       to_name: contactConfig.YOUR_EMAIL,
       message: formData.message,
     };
 
+    // Template parameters for auto-reply
+    const autoReplyParams = {
+      user_name: formData.name,
+      to_name: "Aakhil Shaik",
+    };
+
+    // Send notification email to you
     emailjs
       .send(
         contactConfig.YOUR_SERVICE_ID,
         contactConfig.YOUR_TEMPLATE_ID,
-        templateParams,
+        notificationParams,
         contactConfig.YOUR_USER_ID
       )
       .then(
         (result) => {
-          console.log(result.text);
-          setFormdata({
-            loading: false,
-            alertmessage: "SUCCESS! , Looking forward to reading your email.",
-            variant: "success",
-            show: true,
-          });
+          // Send auto-reply to the sender
+          emailjs
+            .send(
+              contactConfig.YOUR_SERVICE_ID,
+              "template_ezp8h3l", // TODO: Replace this with your auto-reply template ID from EmailJS dashboard
+              autoReplyParams,
+              contactConfig.YOUR_USER_ID
+            )
+            .then(
+              (result) => {
+                console.log(result.text);
+                setFormdata({
+                  loading: false,
+                  alertmessage: "SUCCESS! , Looking forward to reading your email.",
+                  variant: "success",
+                  show: true,
+                });
+              },
+              (error) => {
+                console.log(error.text);
+                setFormdata({
+                  alertmessage: `Failed to send auto-reply!,${error.text}`,
+                  variant: "danger",
+                  show: true,
+                });
+                document.getElementsByClassName("co_alert")[0].scrollIntoView();
+              }
+            );
         },
         (error) => {
           console.log(error.text);
