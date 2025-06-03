@@ -113,11 +113,11 @@ const dataportfolio = [{
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "aakhil7864@gmail.com",
+    YOUR_EMAIL: "aakhilshaik1310@gmail.com",
     description: "Hit me up for collabs, questions, or just a good tech chat. Looking forward to hearing from you!",
-    YOUR_SERVICE_ID: "SERVICE_ID",
-    YOUR_TEMPLATE_ID: "TEMPLATE_ID",
-    YOUR_USER_ID: "USER_ID (PUBLIC_KEY)",
+    YOUR_SERVICE_ID: "service_aww4mbf",
+    YOUR_TEMPLATE_ID: "template_ezp8h3l",
+    YOUR_USER_ID: "eKdbXxJf0v9AvAzMg",
 };
 
 const socialprofils = {
