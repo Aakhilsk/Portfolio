@@ -1,6 +1,6 @@
 const logotext = "AK";
 const meta = {
-    title: "{Your name}",
+    title: "Aakhil's Portfolio",
     description: "I'm Aakhil Shaik, a technologist and cybersecurity enthuist.",
 };
 
