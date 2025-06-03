@@ -116,7 +116,7 @@ const contactConfig = {
     YOUR_EMAIL: "aakhil7864@gmail.com",
     description: "Hit me up for collabs, questions, or just a good tech chat. Looking forward to hearing from you!",
     YOUR_SERVICE_ID: "service_aww4mbf",
-    YOUR_TEMPLATE_ID: "template_ys2j6ow",
+    YOUR_TEMPLATE_ID:"template_gkmsqub",
     YOUR_USER_ID: "eKdbXxJf0v9AvAzMg",
 };
 
